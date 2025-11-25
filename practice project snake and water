@@ -1,0 +1,47 @@
+"""
+ -1 is snake
+0 is water
+1 is gun 
+"""
+import random
+
+computer = random.choice([-1,0,1])
+you = input("Enter want you want to chose :")
+youdict = {"snake":-1, "water":0, "gun":1}
+youu = youdict[you]
+
+reversedict = {-1:"snake", 0:"water", 1:"gun"}
+
+## i make reversedict bcz to tell what you choose snake gun or water
+
+print(f"you chose : {reversedict[youu]} \nAnd computer chose : {reversedict[computer]}")
+
+if (computer == youu) :
+    print("its a draw")
+
+else:
+    if (computer -youu)== -1 or (computer -youu)==2 :
+        print("You Lose !")
+    else:
+        print("You Win!")  #basically the 22 to 26 line are calculated from the various output long output
+
+    # if (computer ==-1 and youu ==0):  ## -1-0 = -1 means lose
+    #     print("you lose !")
+
+    # elif (computer == -1 and youu == 1): ## -1-(1) means -2 means win
+    #     print("you win !")
+
+    # elif (computer == 1 and youu == -1): ## 1-(-1) means 2 means lose
+    #     print("you lose !")
+    
+    # elif (computer == 1 and youu == 0):  ## 1 means win
+    #     print("you win !")
+
+    # elif (computer == 0 and youu == -1):  ## 1 means win
+    #     print("you win !")
+
+    # elif (computer == 0 and youu == 1):  ## -1 means lose
+    #     print("you lose !")
+
+    # else:
+    #     print("Please check \nSomething went wrong")
